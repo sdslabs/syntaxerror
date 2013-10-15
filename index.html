@@ -13,310 +13,8 @@
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="jquery.onepage-scroll.js"></script>
   <link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
-  <style>
-    html {
-      height: 100%;
-    }
-    body {
-      background: #E2E4E7;
-      padding: 0;
-      text-align: center;
-      font-family: 'open sans';
-      position: relative;
-      margin: 0;
-      height: 100%;
-      -webkit-font-smoothing: antialiased;
-    }
-    
-    .wrapper {
-      height: 100% !important;
-      height: 100%;
-      margin: 0 auto; 
-      overflow: hidden;
-    }
-    
-    a {
-      text-decoration: none;
-    }
-    
-    
-    h1, h2 {
-      width: 100%;
-      float: left;
-    }
-    h1 {
-      margin-top: 100px;
-      color: #000;
-      margin-bottom: 5px;
-      font-size: 70px;
-      letter-spacing: -4px;
-      font-weight: 100;
-    }
-    h1 span {
-      font-size: 26px;
-      margin: 0 5px;
-      text-transform: capitalize;
-      background: rgba(0,0,0,0.85);
-      display: inline-block;
-      color: #6D461D;
-      border-radius: 5px 5px;
-      -webkit-border-radius: 5px 5px;
-      -moz-border-radius: 5px 5px;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
-      padding: 3px 10px;
-    }
-    h2 {
-      color: #6D461D;
-      font-weight: 100;
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-    
-    .pointer {
-      color: #9b59b6;
-      font-family: 'Pacifico', cursive;
-      font-size: 30px;
-      margin-top: 15px;
-    }
-    code {
-      margin: 20px 1%;
-      float: left;
-      width: 48%;
-      height: 105px;
-      background: rgba(0,0,0,0.1);
-      border: rgba(0,0,0,0.05) 5px solid;
-      border-radius: 5px;
-      padding:5px;
-      color: white;
-      text-align: center;
-      font-size: 15px;
-      margin-top: 25px;
-      display: block;
-      box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-    }
-    code.html {
-      color: #7EC9E6;
-    }
-    code.js {
-      color: #FFAD00;
-    }
+  <link href="style.css" rel="stylesheet">
 
-    .main {
-      float: left;
-      width: 100%;
-      margin: 0 auto;
-    }
-    
-    .main h1 {
-      padding:150px 50px;
-      float: left;
-      width: 100%;
-      font-size: 45px;
-      box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      font-weight: 100;
-      color: white;
-      margin: 0;
-    }
-   
-    .main h1.demo1 {
-      background: #1ABC9C;
-    }
-    
-    .reload.bell {
-      font-size: 12px;
-      padding: 20px;
-      width: 45px;
-      text-align: center;
-      height: 47px;
-      border-radius: 50px;
-      -webkit-border-radius: 50px;
-      -moz-border-radius: 50px;
-    }
-    
-    .reload.bell #notification {
-      font-size: 25px;
-      line-height: 140%;
-    }
-    
-    .reload, .btn{
-      display: inline-block;
-      border: 4px solid #A2261E;
-      border-radius: 5px;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      background: /*#CC3126*/#22579c;
-      display: inline-block;
-      line-height: 100%;
-      padding: 0.7em;
-      text-decoration: none;
-      color: #fff;
-      width: 100px;
-      line-height: 140%;
-      font-size: 17px;
-      font-family: open sans;
-      font-weight: bold;
-    }
-    .reload:hover{
-      background: #444;
-    }
-    .btn {
-      width: 150px;
-      color: rgb(255, 255, 255);
-      border: 4px solid #22579c;
-      background: #5580bd;
-    }
-    .clear {
-      width: auto;
-    }
-    .btn:hover, .btn:hover {
-      background: #444;
-    }
-    .btns {
-      width: 410px;
-      margin: 50px auto;
-    }
-    .credit {
-      text-align: justify;
-      color: rgba(0,0,0,0.7);
-      padding: 10px;
-      width: 410px;
-      margin: 8px 0;
-      clear: both;
-    }
-    .credit a {
-      color: rgba(0,0,0,0.85);
-      text-decoration: none;
-      font-weight: bold;
-      text-align: center;
-    }
-    
-    .back {
-      position: absolute;
-      top: 0;
-      left: 0;
-      text-align: center;
-      display: block;
-      padding: 7px;
-      width: 100%;
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      background: rgba(255, 255, 255, 0.25);
-      font-weight: bold;
-      font-size: 13px;
-      color: #000;
-      -webkit-transition: all 500ms ease-in-out;
-      -moz-transition: all 500ms ease-in-out;
-      -o-transition: all 500ms ease-in-out;
-      transition: all 500ms ease-in-out;
-    }
-    .back:hover {
-      color: black;
-      background: rgba(255, 255, 255, 0.5);
-    }
-    
-    header {
-      position: relative;
-      z-index: 10;
-    }
-    .main section .page_container {
-      position: relative;
-      top: 10%;
-      margin: 0 auto 0;
-      max-width: 950px;
-      z-index: 3;
-    }
-    .main section  {
-      overflow: hidden;
-    }
-    
-    .main section > img {
-      position: absolute;
-      max-width: 100%;
-      bottom: 5%;
-      z-index: 1;
-    }
-    
-    .main section.page1 {
-      background:rgb(225, 225, 225);
-    }
-    .main section.page1 h1 {
-      text-align: left;
-      padding: 0 0 0 45px;
-      margin-bottom: 15px;
-      font-size: 70px;
-      color: black;
-    }
-    .main section.page1 h2 {
-      color: rgba(0,0,0,0.85);
-      text-align: center;
-      width: 435px;
-      line-height: 160%;
-    }
-    .main section .page_container .btns {
-      clear: both;
-      float: left;
-      text-align: center;
-      width: 435px;
-    }
-    .main section .page_container .btns a{
-      text-align: center;
-    }
-    .main section.page2 {
-      background: rgba(0,0,0,0.7);
-    }
-    .main section.page3 {
-      background: rgb(225,225,225);
-    }
-    .main section.page2 > img {
-      position: absolute;
-      top: -300px;
-      left: 50%;
-      margin-left: -1095px;
-    }
-    .main section.page2 .page_container {
-      margin-top: 0px;
-      overflow: hidden;
-    }
-    .main section.page2 h1 {
-      text-align: center;
-      padding: 0;
-      margin-bottom: 15px;
-      font-size: 50px;
-      letter-spacing: -1px;
-      color: white;
-    }
-    .main section.page2 h2 {
-      color: rgba(255,255,255,0.85);
-      text-align: center;
-      line-height: 160%;
-      font-weight: 100;
-    }
-    .viewing-page-2 .back{
-      background: rgba(0, 0, 0, 0.25);
-      color: #FFF;
-    }
-    .main section.page3 h2 {
-      color: #555;
-      text-align: justify;
-    }
-    .main section.page3 h3 {
-      text-align: justify;
-    }
-    .main section.page3 .page_container {
-      text-align: justify;
-    }
-    img {
-      text-align: initial;
-    }
-    div#uvTab{
-      display:none;
-    }
-  </style>
   <script>
     $(document).ready(function(){
       $(".main").onepage_scroll({
@@ -341,63 +39,13 @@
       <section class="page1">
         <div class="page_container">
           
-            <div class="time" style="position:absolute;top:8%;right:1%;text-align:center;">
+            <div class="time" style="position:absolute;top:15%;right:2%;text-align:center;">
             <h2>When?</h2>
             <p>19th-20th October 2013</p>
             
             
 
-            <span class="odometer-container" style="position:relative;left:120px;">
-              <span class="days" style="float:left;">
-                <span class="odometer odometer-theme-train-station">
-                  0
-                </span>
-                <span class="odometer odometer-theme-train-station">
-                  0
-                </span>
-                &nbsp;&nbsp;
-              </span>
-
-              
-
-              <span class="hours" style="float:left;">        
-                <span class="odometer odometer-theme-train-station">
-                  0
-                </span>
-                <span class="odometer odometer-theme-train-station">
-                  0
-                </span> 
-                &nbsp;&nbsp;
-              </span>
-
-              <!--<span class="colon" style="float:left;">
-                &nbsp;&nbsp;:&nbsp;&nbsp;
-              </span>-->
-
-              <span class="minutes" style="float:left;">
-                <span class="odometer odometer-theme-train-station">
-                  0
-                </span>
-                <span class="odometer odometer-theme-train-station">
-                  0
-                </span>
-                &nbsp;&nbsp;
-              </span>
-
-              <!--<span class="colon" style="float:left;">
-                &nbsp;&nbsp;:&nbsp;&nbsp;
-              </span>-->
-
-              <span class="seconds" style="float:left;">
-                <span class="odometer odometer-theme-train-station">
-                  0
-                </span>
-                <span class="odometer odometer-theme-train-station">
-                  0
-                </span>
-                &nbsp;&nbsp;
-              </span>
-            </span>
+          
           </div>
 
           <br>
@@ -419,7 +67,12 @@
             </script>
             <br>
             <div class="fb-like" data-href="https://www.facebook.com/SDSLabs" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="standard" data-action="like" data-show-faces="true" data-send="false"></div>
+             <div class="btns">
+              <a class="reload btn" href="https://plus.google.com/events/cvm3l40cjuo84du2bnke0fvvp54">Google+ Event</a>
+              <a class="reload btn" href="https://www.facebook.com/events/633332623356464/">Facebook Event</a>
+            </div>
           </div>
+
           <a href="/"><img src="images/text.png" style="float:left;margin-left:20px"></a>
           <p class="credit">They say food, laptop and internet is all you need to create the next big thing. But a little incentive hurt nobody!<br><br>
 
@@ -430,12 +83,9 @@
           Have interesting add-ons or features to existing web products or apps? Or have a cool new product idea itself? Then this event is the perfect platform.</p>
 
           <p class="credit">Come hack with the best minds of Roorkee and stand a chance to win exciting prizes sponsored by Google and GitHub!<br><br><b>The event is invite-only.</b> Register for an invite <a href="http://bit.ly/syntaxerror13" target="_blank">here</a>.</p>
-          <div class="btns">
-            <a class="reload btn" href="https://plus.google.com/events/cvm3l40cjuo84du2bnke0fvvp54">Google+ Event</a>
-            <a class="reload btn" href="https://www.facebook.com/events/633332623356464/">Facebook Event</a>
-          </div>
+         
         </div>
-        <img src="images/syntaxerror.png" alt="phones">
+        
       </section>
       
       <section class="page2" id="agenda">
