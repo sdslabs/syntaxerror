@@ -1,15 +1,16 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Syntax Error</title>
-	<meta name="title" content="Syntax Error" />
-	<meta name="description" content="Syntax Error is a 24 hours hackathon organized by SDSLabs with support from Google and Github" />
-	<link rel="image_src" href="/images/notify_better_image.png" />
-	<link rel="shortcut icon" id="favicon" href="images/favicon.png"> 
-	<meta name="author" content="SDSLabs">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="jquery.js"></script>
+  <meta charset="utf-8">
+  <title>Syntax Error</title>
+  <meta name="title" content="Syntax Error" />
+  <meta name="description" content="Syntax Error is a 24 hours hackathon organized by SDSLabs with support from Google and Github" />
+  <link rel="image_src" href="/images/notify_better_image.png" />
+  <link rel="shortcut icon" id="favicon" href="images/favicon.png"> 
+  <meta name="author" content="SDSLabs">
+  <link rel="stylesheet" href="odometer-theme-car.css" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="jquery.onepage-scroll.js"></script>
   <link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
   <style>
@@ -28,10 +29,10 @@
     }
     
     .wrapper {
-    	height: 100% !important;
-    	height: 100%;
-    	margin: 0 auto; 
-    	overflow: hidden;
+      height: 100% !important;
+      height: 100%;
+      margin: 0 auto; 
+      overflow: hidden;
     }
     
     a {
@@ -312,18 +313,18 @@
     img {
       text-align: initial;
     }
-		div#uvTab{
-			display:none;
-		}
-	</style>
-	<script>
-	  $(document).ready(function(){
+    div#uvTab{
+      display:none;
+    }
+  </style>
+  <script>
+    $(document).ready(function(){
       $(".main").onepage_scroll({
         sectionContainer: "section"
       });
-		});
-		
-	</script>
+    });
+    
+  </script>
 </head>
 <body>
   <div id="fb-root"></div>
@@ -335,13 +336,74 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
   <div class="wrapper">
-	  <div class="main">
-	    
+    <div class="main">
+      
       <section class="page1">
         <div class="page_container">
-          <div style="position:absolute;top:10%;right:1%;">
+          
+            <div class="time" style="position:absolute;top:8%;right:1%;text-align:center;">
             <h2>When?</h2>
             <p>19th-20th October 2013</p>
+            
+            
+
+            <span class="odometer-container" style="position:relative;left:120px;">
+              <span class="days" style="float:left;">
+                <span class="odometer odometer-theme-train-station">
+                  0
+                </span>
+                <span class="odometer odometer-theme-train-station">
+                  0
+                </span>
+                &nbsp;&nbsp;
+              </span>
+
+              
+
+              <span class="hours" style="float:left;">        
+                <span class="odometer odometer-theme-train-station">
+                  0
+                </span>
+                <span class="odometer odometer-theme-train-station">
+                  0
+                </span> 
+                &nbsp;&nbsp;
+              </span>
+
+              <!--<span class="colon" style="float:left;">
+                &nbsp;&nbsp;:&nbsp;&nbsp;
+              </span>-->
+
+              <span class="minutes" style="float:left;">
+                <span class="odometer odometer-theme-train-station">
+                  0
+                </span>
+                <span class="odometer odometer-theme-train-station">
+                  0
+                </span>
+                &nbsp;&nbsp;
+              </span>
+
+              <!--<span class="colon" style="float:left;">
+                &nbsp;&nbsp;:&nbsp;&nbsp;
+              </span>-->
+
+              <span class="seconds" style="float:left;">
+                <span class="odometer odometer-theme-train-station">
+                  0
+                </span>
+                <span class="odometer odometer-theme-train-station">
+                  0
+                </span>
+                &nbsp;&nbsp;
+              </span>
+            </span>
+          </div>
+
+          <br>
+          <div style="position:absolute;top:35%;right:1%;">
+
+
             <h2>Where?</h2>
             <p>Seminar Hall, Placement Complex & Lecture Hall Complex</p>
             <!-- Place this tag where you want the +1 button to render. -->
@@ -371,20 +433,20 @@
           <div class="btns">
             <a class="reload btn" href="https://plus.google.com/events/cvm3l40cjuo84du2bnke0fvvp54">Google+ Event</a>
             <a class="reload btn" href="https://www.facebook.com/events/633332623356464/">Facebook Event</a>
-  	      </div>
-  	    </div>
-  	    <img src="images/syntaxerror.png" alt="phones">
+          </div>
+        </div>
+        <img src="images/syntaxerror.png" alt="phones">
       </section>
-	    
-	    <section class="page2">
-	      <div class="page_container">
+      
+      <section class="page2">
+        <div class="page_container">
           <h1>Poster</h1>
           <a href="images/poster.jpg"><img src="images/poster.jpg" style="width:37%"></a>
-	      </div>
+        </div>
       </section>
-	    
-	    <section class="page3 page2">
-	      <div class="page_container">
+      
+      <section class="page3 page2">
+        <div class="page_container">
           <h1 style="color: #555;">Frequently Asked Questions</h1>
           <h2>What is a hackathon?</h2>
           <p>Time-limited coding event. You've got < 24 hours to produce something that works and is impressive. You bring nothing but a laptop and an idea, and hopefully leave with working code. You might want to read <a href="https://medium.com/hackathons-anonymous/92668579601" target="_blank">this</a>.</p>
@@ -398,10 +460,81 @@
           <p>
             Just fill this form: <a href="http://bit.ly/syntaxerror13">http://bit.ly/syntaxerror13</a>. Shortlisted students will be informed by the evening of 17th October, 2013.
           </p>
-  	    </div>
+        </div>
       </section>
     </div>
     <a class="back" href="http://bit.ly/syntaxerror13">Register</a>
   </div>
+
+  <script type="text/javascript">
+      var targetTime = new Date("October 19, 2013 18:00:00");
+    
+      setInterval(function(){
+        var x = new Date()
+        var currentTime = x.getTime();
+        c = (targetTime-currentTime)/1000;
+        total = Math.floor(c)
+        //console.log(total);
+        days = Math.floor(c/(60*60*24)).toString();
+        
+        d = ((c/(60*60*24))-days)*60*60*24;
+        hours = Math.floor(d/(60*60));
+        if(hours<10)
+        {
+          hours = "0" + hours.toString();
+        }
+        
+        minutes = Math.floor((d-hours*60*60)/60);
+        if(minutes < 10)
+        {
+          minutes = "0" + minutes.toString();
+        }
+        seconds = Math.floor(((d-hours*60*60)/60 - minutes)*60)
+        if(seconds < 10)
+        {
+          seconds = "0" + seconds.toString();
+        }
+
+        
+      if(c >= 0){
+        $('.days .odometer:nth-child(1)').html(0);
+        $('.days .odometer:nth-child(2)').html(days);
+
+        if(hours.toString().length < 2)
+        {
+          $('.hours .odometer:nth-child(1)').html(0);
+          $('.hours .odometer:nth-child(2)').html(hours.toString()[0]);
+        }
+        else
+        {
+          $('.hours .odometer:nth-child(1)').html(hours.toString()[0]);
+          $('.hours .odometer:nth-child(2)').html(hours.toString()[1]);
+        }
+
+        if(minutes.toString().length < 2)
+        {
+          $('.minutes .odometer:nth-child(1)').html(0);
+          $('.minutes .odometer:nth-child(2)').html(minutes.toString()[1]);
+        }
+        else
+        {
+          $('.minutes .odometer:nth-child(1)').html(minutes.toString()[0]);
+          $('.minutes .odometer:nth-child(2)').html(minutes.toString()[1]);
+        }
+
+        if(seconds.toString().length < 2)
+        {
+          $('.seconds .odometer:nth-child(1)').html(0);
+          $('.seconds .odometer:nth-child(2)').html(seconds.toString()[1]);
+        }
+        else
+        {
+          $('.seconds .odometer:nth-child(1)').html(seconds.toString()[0]);
+          $('.seconds .odometer:nth-child(2)').html(seconds.toString()[1]);
+        }
+      }}, 1000)
+    </script>
+    <script src="odometer.min.js"></script>
+
 </body>
 </html>
